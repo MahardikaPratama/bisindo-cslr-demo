@@ -218,7 +218,7 @@ cp .env.example .env
 #### Terminal 1 — Start Backend Server
 ```bash
 # From project root (venv activated)
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 **Expected output:**

@@ -74,4 +74,4 @@ if __name__ == "__main__":
     print("\n✅ Setup complete!")
     print("Next steps:")
     print("  1. Place baseline_model_bisindo.pt in models/ directory")
-    print("  2. Run: python app/main.py")
+    print("  2. Run: python -m uvicorn app.main:app --reload")

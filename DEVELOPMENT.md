@@ -45,7 +45,7 @@ cp .env.example .env
 #### Step 4: Run Backend
 ```bash
 # Option 1: Direct Python
-python app/main.py
+python -m uvicorn app.main:app --reload
 
 # Option 2: Uvicorn (more control)
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
@@ -86,7 +86,7 @@ npm run dev
 ```bash
 # From project root
 source venv/bin/activate  # or venv\Scripts\activate on Windows
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 #### Terminal 2 - Frontend

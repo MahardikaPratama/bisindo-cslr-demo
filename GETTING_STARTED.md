@@ -25,7 +25,7 @@ pip install -r requirements.txt
 cp .env.gpu .env
 
 # 6. Start backend
-python app/main.py
+python -m uvicorn app.main:app --reload
 
 # 7. In new terminal, start frontend
 cd frontend

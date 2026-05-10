@@ -186,7 +186,7 @@ pip install -r requirements.txt
 cp .env.cpu .env
 
 # 5. Run backend
-python app/main.py
+python -m uvicorn app.main:app --reload
 
 # 6. In new terminal, run frontend
 cd frontend

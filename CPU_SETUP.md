@@ -89,7 +89,7 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:5173
 ## Step 5: Run Backend
 
 ```bash
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 **Expected output (CPU mode):**
@@ -262,7 +262,7 @@ cp .env.example .env
 # Edit .env and set: DEVICE=cpu
 
 # 6. Start backend
-python app/main.py
+python -m uvicorn app.main:app --reload
 
 # 7. In new terminal, start frontend
 cd frontend
@@ -278,7 +278,7 @@ npm run dev
 
 1. ✅ Install dependencies
 2. ✅ Configure `.env` with `DEVICE=cpu`
-3. Run backend: `python app/main.py`
+3. Run backend: `python -m uvicorn app.main:app --reload`
 4. Run frontend: `cd frontend && npm run dev`
 5. Test with small videos first
 6. Gradually increase video size

@@ -32,21 +32,21 @@ This directory contains multiple `.env` template files for different hardware se
 ```bash
 cp .env.gpu .env
 # Edit .env if needed
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ### For CPU System
 ```bash
 cp .env.cpu .env
 # Edit .env if needed
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ### For Auto-Detect (Default)
 ```bash
 cp .env.example .env
 # Edit .env if needed
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ---
@@ -138,7 +138,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # Update config
 cp .env.cpu .env
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ### From CPU to GPU
@@ -151,7 +151,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # Update config
 cp .env.gpu .env
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ---

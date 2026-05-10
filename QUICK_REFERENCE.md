@@ -20,7 +20,7 @@ pip install -r requirements.txt
 cp .env.cpu .env
 
 # 5. Run
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 #### ⚡ GPU (NVIDIA)
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 cp .env.gpu .env
 
 # 5. Run
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ---
@@ -209,7 +209,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 cp .env.gpu .env
 
 # 4. Restart
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 #### GPU → CPU
@@ -224,7 +224,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 cp .env.cpu .env
 
 # 4. Restart
-python app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 ---
